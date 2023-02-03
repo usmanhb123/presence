@@ -13,12 +13,26 @@ dependencies:
   cloud_firestore: 3.1.17
   flutter: 
     sdk: flutter
+  font_awesome_flutter: ^10.3.0
+  flutter_native_splash: ^2.2.17
 
 dev_dependencies: 
   flutter_lints: ^1.0.0
   flutter_test: 
     sdk: flutter
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/lottiefiles/maps.gif
+
+  android_12:
+    color: "#FFFFFF"
+    image: assets/lottiefiles/maps.gif
+  web: false
 
 flutter: 
+  assets: 
+    - assets/lottiefiles/
+    - assets/icons/
   uses-material-design: true
+
 
