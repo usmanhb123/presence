@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:presence/app/data/controllers/authController.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
+
+  final authC = Get.put(AuthController(), permanent: true);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +58,7 @@ class LoginView extends GetView<LoginController> {
               
               SizedBox(height: 20),
               FloatingActionButton.extended(
-                onPressed: () => {},
+                onPressed: () => authC.login(),
                 label: const Text("Sign In With Google"),
                 icon: const Icon(
                   FontAwesomeIcons.google,

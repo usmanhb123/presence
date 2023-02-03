@@ -30,8 +30,15 @@ void tambahPegawai() async{
           "createdAd": DateTime.now().toIso8601String(),
         });
        await userCredential.user!.sendEmailVerification();
+       await firestore.collection('user_vermuk').doc(emailC.text).set({
+          "email": emailC.text,
+          "status": 0,
+          "nama": namaC.text,
+          "vermuk": 0,
+          "createdAd": DateTime.now().toIso8601String(),
+        });
         // window.console.info(userCredential);
-        print(userCredential);
+        // print(userCredential);
       }
       
     } on FirebaseAuthException catch (e) {

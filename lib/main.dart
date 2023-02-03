@@ -2,12 +2,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+// import 'package:presence/app/data/controllers/authController.dart';
 
 import 'app/routes/app_pages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  // final authC = Get.put(AuthController(), permanent: true);
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -28,10 +30,17 @@ void main() async {
           ),
         );
       }
+      if (snapshot.data != null) {
+        print(snapshot.data!.uid);
+        
+        print('udah logn');
+      } else {
+        print('blum logn');
+      }
       return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
         title: "Application",
-        // ignore: unnecessary_null_comparison
-        initialRoute: snapshot.data == null ? Routes.LOGIN : Routes.HOME,
+        initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
         getPages: AppPages.routes,
       );
     },

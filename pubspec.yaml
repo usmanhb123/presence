@@ -14,23 +14,21 @@ dependencies:
   flutter: 
     sdk: flutter
   font_awesome_flutter: ^10.3.0
-  flutter_native_splash: ^2.2.17
-
+  google_sign_in: ^5.4.3
+  camera: ^0.10.2+1
+  tflite_flutter: ^0.9.0
+  tflite_flutter_helper: ^0.2.1
+  google_ml_kit: ^0.7.3
+  path_provider: ^2.0.9
+  
 dev_dependencies: 
   flutter_lints: ^1.0.0
   flutter_test: 
     sdk: flutter
-flutter_native_splash:
-  color: "#FFFFFF"
-  image: assets/lottiefiles/maps.gif
-
-  android_12:
-    color: "#FFFFFF"
-    image: assets/lottiefiles/maps.gif
-  web: false
 
 flutter: 
   assets: 
+    - mobilefacenet.tflite
     - assets/lottiefiles/
     - assets/icons/
   uses-material-design: true

@@ -8,6 +8,9 @@ abstract class Routes {
   static const ADD_PEGAWAI = _Paths.ADD_PEGAWAI;
   static const LOGIN = _Paths.LOGIN;
   static const NEW_PASSWORD = _Paths.NEW_PASSWORD;
+  static const REGISTER_FACE = _Paths.REGISTER_FACE;
+  static const PRESENCE_FACE = _Paths.PRESENCE_FACE;
+  static const FACE_VERIFICATION = _Paths.FACE_VERIFICATION;
 }
 
 abstract class _Paths {
@@ -15,4 +18,7 @@ abstract class _Paths {
   static const ADD_PEGAWAI = '/add-pegawai';
   static const LOGIN = '/login';
   static const NEW_PASSWORD = '/new-password';
+  static const REGISTER_FACE = '/register-face';
+  static const PRESENCE_FACE = '/presence-face';
+  static const FACE_VERIFICATION = '/face-verification';
 }
