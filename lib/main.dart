@@ -2,8 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:presence/app/controllers/page_index_controller.dart';
 // import 'package:presence/app/data/controllers/authController.dart';
 
+import 'app/data/controllers/authController.dart';
 import 'app/routes/app_pages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -14,6 +16,9 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  final authC = Get.put(AuthController());
+  final pageC = Get.put(PageIndexController(), permanent: true);
   runApp(StreamBuilder<User?>(
     stream: FirebaseAuth.instance.authStateChanges(),
     builder: (context, snapshot) {
@@ -31,7 +36,7 @@ void main() async {
         );
       }
       if (snapshot.data != null) {
-        print(snapshot.data!.uid);
+        print(snapshot.data);
         
         print('udah logn');
       } else {

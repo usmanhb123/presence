@@ -55,7 +55,8 @@ class AuthController extends GetxController {
           isAuth.value = true;
           if(cek_vermuk['status'] == 0){
             Get.snackbar("Register faces", "If you haven't registered your face yet, please register first");
-            Get.offAllNamed(Routes.REGISTER_FACE);
+            // Get.offAllNamed(Routes.REGISTER_FACE);
+             Get.offAllNamed(Routes. HOME);
           }else{
              Get.offAllNamed(Routes. HOME);
           }
@@ -71,10 +72,10 @@ class AuthController extends GetxController {
   }
 
   
-  Future logout() async {
-    // print("fungsi logout");
+  Future<void> logout() async {
+
     await FirebaseAuth.instance.signOut();
-    await GoogleSignIn().signOut();
-    Get.offAllNamed(Routes.LOGIN);
+    // await GoogleSignIn().signOut();
+    return Get.offAllNamed(Routes.LOGIN);
   }
 }

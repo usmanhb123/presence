@@ -16,13 +16,18 @@ class NewPasswordView extends GetView<NewPasswordController> {
         padding: EdgeInsets.all(20),
         children: [
           TextField(
+            obscureText: true,
+            controller: controller.newPass,
             autocorrect: false,
             decoration: InputDecoration(
               labelText: "New password",
               border: OutlineInputBorder()
             ),
           ),
-          ElevatedButton(onPressed: (){}, child: Text("data"))
+          ElevatedButton(onPressed: (){
+            controller.newPassword();
+
+          }, child: Text("Next"))
         ],
 
       )

@@ -11,6 +11,7 @@ abstract class Routes {
   static const REGISTER_FACE = _Paths.REGISTER_FACE;
   static const PRESENCE_FACE = _Paths.PRESENCE_FACE;
   static const FACE_VERIFICATION = _Paths.FACE_VERIFICATION;
+  static const PROFILE = _Paths.PROFILE;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const REGISTER_FACE = '/register-face';
   static const PRESENCE_FACE = '/presence-face';
   static const FACE_VERIFICATION = '/face-verification';
+  static const PROFILE = '/profile';
 }
