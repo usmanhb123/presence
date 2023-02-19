@@ -36,7 +36,7 @@ void main() async {
         );
       }
       if (snapshot.data != null) {
-        print(snapshot.data);
+        // print(snapshot.data);
         
         print('udah logn');
       } else {

@@ -2,6 +2,10 @@ import 'package:get/get.dart';
 
 import '../modules/add_pegawai/bindings/add_pegawai_binding.dart';
 import '../modules/add_pegawai/views/add_pegawai_view.dart';
+import '../modules/all_presensi/bindings/all_presensi_binding.dart';
+import '../modules/all_presensi/views/all_presensi_view.dart';
+import '../modules/detail_presensi/bindings/detail_presensi_binding.dart';
+import '../modules/detail_presensi/views/detail_presensi_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -20,11 +24,10 @@ class AppPages {
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
-      page: () => HomeView(),
-      binding: HomeBinding(),
-      transition: Transition.noTransition
-    ),
+        name: _Paths.HOME,
+        page: () => HomeView(),
+        binding: HomeBinding(),
+        transition: Transition.noTransition),
     GetPage(
       name: _Paths.ADD_PEGAWAI,
       page: () => AddPegawaiView(),
@@ -56,10 +59,19 @@ class AppPages {
     //   binding: FaceVerificationBinding(),
     // ),
     GetPage(
-      name: _Paths.PROFILE,
-      page: () => ProfileView(),
-      binding: ProfileBinding(),
-      transition: Transition.noTransition
+        name: _Paths.PROFILE,
+        page: () => ProfileView(),
+        binding: ProfileBinding(),
+        transition: Transition.noTransition),
+    GetPage(
+      name: _Paths.DETAIL_PRESENSI,
+      page: () => const DetailPresensiView(),
+      binding: DetailPresensiBinding(),
+    ),
+    GetPage(
+      name: _Paths.ALL_PRESENSI,
+      page: () => const AllPresensiView(),
+      binding: AllPresensiBinding(),
     ),
   ];
 }

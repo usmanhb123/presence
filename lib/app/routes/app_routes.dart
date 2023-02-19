@@ -12,6 +12,8 @@ abstract class Routes {
   static const PRESENCE_FACE = _Paths.PRESENCE_FACE;
   static const FACE_VERIFICATION = _Paths.FACE_VERIFICATION;
   static const PROFILE = _Paths.PROFILE;
+  static const DETAIL_PRESENSI = _Paths.DETAIL_PRESENSI;
+  static const ALL_PRESENSI = _Paths.ALL_PRESENSI;
 }
 
 abstract class _Paths {
@@ -23,4 +25,6 @@ abstract class _Paths {
   static const PRESENCE_FACE = '/presence-face';
   static const FACE_VERIFICATION = '/face-verification';
   static const PROFILE = '/profile';
+  static const DETAIL_PRESENSI = '/detail-presensi';
+  static const ALL_PRESENSI = '/all-presensi';
 }

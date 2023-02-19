@@ -10,15 +10,25 @@ class NewPasswordController extends GetxController {
   void newPassword() async {
     if (newPass.text.isNotEmpty) {
       if (newPass.text != "12345678") {
-        await auth.currentUser!.updatePassword(newPass.text);
-        String email = auth.currentUser!.email!;
+        try {
+          await auth.currentUser!.updatePassword(newPass.text);
+          String email = auth.currentUser!.email!;
 
-        await auth.signOut();
+          await auth.signOut();
 
-        await FirebaseAuth.instance.signOut();
-        Get.snackbar(
-            "Berhasil", "Password berhasil diubah silahkan login kembali.");
-        Get.offAllNamed(Routes.LOGIN);
+          await FirebaseAuth.instance.signOut();
+          Get.snackbar(
+              "Berhasil", "Password berhasil diubah silahkan login kembali.");
+          Get.offAllNamed(Routes.LOGIN);
+        } on FirebaseAuthException catch (e) {
+          if (e.code == 'weak-password') {
+            Get.snackbar("Terjadi kesalahan",
+                "Password terlalu lemah setidaknya 6 Karakter.");
+          }
+        } catch (e) {
+          Get.snackbar("Terjadi kesalahan",
+              "Tidak dapat membuat password baru silahkan hubungi admin!");
+        }
       } else {
         Get.snackbar("Terjadi Kesalahan",
             "Password tidak boleh sama dengan password sebelumnya!");

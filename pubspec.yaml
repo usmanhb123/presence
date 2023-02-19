@@ -17,6 +17,10 @@ dependencies:
   intl: ^0.17.0
   flutter: 
     sdk: flutter
+  sidebarx: ^0.14.0
+  geolocator: ^9.0.2
+  google_geocoding_api: ^1.2.0
+  nominatim_geocoding: ^0.0.6
 
 dev_dependencies: 
   flutter_lints: ^1.0.0
