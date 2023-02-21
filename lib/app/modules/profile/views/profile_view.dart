@@ -61,12 +61,28 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                   SizedBox(height: 20),
                   ListTile(
-                    onTap: () {},
+                    onTap: () async {
+                      await Get.defaultDialog(
+                          barrierDismissible: false,
+                          title: "Update Profile",
+                          middleText:
+                              "Untuk update profile silahkan hubungi admin untuk mengubah data diri anda!",
+                          actions: [
+                            // OutlinedButton(onPressed: () => Get.back(), child: Text("Cancel")),
+                            ElevatedButton(
+                                onPressed: () {
+                                  Get.back();
+                                },
+                                child: Text("Ok")),
+                          ]);
+                    },
                     leading: Icon(Icons.person),
                     title: Text("Update Profile"),
                   ),
                   ListTile(
-                    onTap: () {},
+                    onTap: () async {
+                      await authC.resetPassword();
+                    },
                     leading: Icon(Icons.vpn_key),
                     title: Text("Update Password"),
                   ),

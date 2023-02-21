@@ -14,6 +14,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const DETAIL_PRESENSI = _Paths.DETAIL_PRESENSI;
   static const ALL_PRESENSI = _Paths.ALL_PRESENSI;
+  static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const DETAIL_PRESENSI = '/detail-presensi';
   static const ALL_PRESENSI = '/all-presensi';
+  static const FORGOT_PASSWORD = '/forgot-password';
 }

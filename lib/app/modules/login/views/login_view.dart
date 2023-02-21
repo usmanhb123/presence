@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:presence/app/data/controllers/authController.dart';
+import 'package:presence/app/routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -22,9 +23,6 @@ class LoginView extends GetView<LoginController> {
       ),
     );
   }
-
-
-
 
   LoginTablet() {
     return Row(
@@ -46,10 +44,7 @@ class LoginView extends GetView<LoginController> {
               children: [
                 Text(
                   'Welcome back',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold
-                  ),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 8),
                 Text(
@@ -80,9 +75,10 @@ class LoginView extends GetView<LoginController> {
                     child: Text(controller.isLoading.isFalse
                         ? "Login"
                         : "Loading..."))),
-                        
                 SizedBox(height: 20),
-                TextButton(onPressed: () {}, child: Text("Forgot Password?")),
+                TextButton(
+                    onPressed: () => Get.toNamed(Routes.FORGOT_PASSWORD),
+                    child: Text("Forgot Password?")),
                 SizedBox(height: 20),
                 Row(
                   children: [
@@ -118,10 +114,6 @@ class LoginView extends GetView<LoginController> {
     );
   }
 
-
-
-
-
   loginMobilePhone() {
     return SafeArea(
       child: ListView(
@@ -137,7 +129,7 @@ class LoginView extends GetView<LoginController> {
           //    padding: const EdgeInsets.symmetric(horizontal: 150),
           //    child: Column(
           //     children: [
-                
+
           //     ],
           //    ),
           // )
@@ -164,7 +156,9 @@ class LoginView extends GetView<LoginController> {
               },
               child:
                   Text(controller.isLoading.isFalse ? "Login" : "Loading..."))),
-          TextButton(onPressed: () {}, child: Text("Forgot Password?")),
+          TextButton(
+              onPressed: () => Get.toNamed(Routes.FORGOT_PASSWORD),
+              child: Text("Forgot Password?")),
           Row(
             children: [
               Expanded(

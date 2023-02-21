@@ -6,6 +6,8 @@ import '../modules/all_presensi/bindings/all_presensi_binding.dart';
 import '../modules/all_presensi/views/all_presensi_view.dart';
 import '../modules/detail_presensi/bindings/detail_presensi_binding.dart';
 import '../modules/detail_presensi/views/detail_presensi_view.dart';
+import '../modules/forgot_password/bindings/forgot_password_binding.dart';
+import '../modules/forgot_password/views/forgot_password_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -20,7 +22,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.LOGIN;
 
   static final routes = [
     GetPage(
@@ -65,13 +67,18 @@ class AppPages {
         transition: Transition.noTransition),
     GetPage(
       name: _Paths.DETAIL_PRESENSI,
-      page: () => const DetailPresensiView(),
+      page: () => DetailPresensiView(),
       binding: DetailPresensiBinding(),
     ),
     GetPage(
       name: _Paths.ALL_PRESENSI,
       page: () => const AllPresensiView(),
       binding: AllPresensiBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD,
+      page: () => const ForgotPasswordView(),
+      binding: ForgotPasswordBinding(),
     ),
   ];
 }

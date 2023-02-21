@@ -36,6 +36,7 @@ void main() async {
         );
       }
       if (snapshot.data != null) {
+        // print(snapshot.data!.uid);
         // print(snapshot.data);
         
         print('udah logn');
@@ -45,7 +46,8 @@ void main() async {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: "Application",
-        initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
+        initialRoute: 
+        snapshot.data != null ? Routes.HOME : Routes.LOGIN,
         getPages: AppPages.routes,
       );
     },

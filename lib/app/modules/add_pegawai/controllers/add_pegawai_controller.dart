@@ -37,12 +37,12 @@ Future<void> prosesAddPegawai() async {
             "createdAd": DateTime.now().toIso8601String(),
           });
           await pegawaiCredential.user!.sendEmailVerification();
-          await firestore.collection('user_vermuk').doc(emailC.text).set({
-            "email": emailC.text,
-            "status": 0,
-            "nama": namaC.text,
-            "vermuk": 0,
-            "createdAd": DateTime.now().toIso8601String(),
+          await firestore.collection('pegawai_cek').doc(emailC.text).set({
+            // "email": emailC.text,
+            "status": 1,
+            // "nama": namaC.text,
+            // "vermuk": 0,
+            // "createdAd": DateTime.now().toIso8601String(),
           });
           // window.console.info(pegawaiCredential);
           // print(pegawaiCredential);
