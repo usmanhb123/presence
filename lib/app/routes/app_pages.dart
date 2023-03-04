@@ -2,8 +2,12 @@ import 'package:get/get.dart';
 
 import '../modules/add_pegawai/bindings/add_pegawai_binding.dart';
 import '../modules/add_pegawai/views/add_pegawai_view.dart';
+import '../modules/all_pegawai/bindings/all_pegawai_binding.dart';
+import '../modules/all_pegawai/views/all_pegawai_view.dart';
 import '../modules/all_presensi/bindings/all_presensi_binding.dart';
 import '../modules/all_presensi/views/all_presensi_view.dart';
+import '../modules/detail_pegawai/bindings/detail_pegawai_binding.dart';
+import '../modules/detail_pegawai/views/detail_pegawai_view.dart';
 import '../modules/detail_presensi/bindings/detail_presensi_binding.dart';
 import '../modules/detail_presensi/views/detail_presensi_view.dart';
 import '../modules/forgot_password/bindings/forgot_password_binding.dart';
@@ -79,6 +83,16 @@ class AppPages {
       name: _Paths.FORGOT_PASSWORD,
       page: () => const ForgotPasswordView(),
       binding: ForgotPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.ALL_PEGAWAI,
+      page: () => const AllPegawaiView(),
+      binding: AllPegawaiBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_PEGAWAI,
+      page: () => DetailPegawaiView(),
+      binding: DetailPegawaiBinding(),
     ),
   ];
 }

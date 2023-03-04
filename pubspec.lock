@@ -142,6 +142,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_admin_scaffold:
+    dependency: "direct main"
+    description:
+      name: flutter_admin_scaffold
+      sha256: "82b21164a7ccfa32d4e6fe8ca41699b98adeb91a6400e3e90eb3a488730b7a95"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.2"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -352,6 +360,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.1"
+  sidebarx:
+    dependency: "direct main"
+    description:
+      name: sidebarx
+      sha256: "26a8392ceddb659c8f2c688beba6c04bcbf520b4d5decb143c5fd7253653081f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.15.0"
   sky_engine:
     dependency: transitive
     description: flutter

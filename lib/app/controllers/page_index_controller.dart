@@ -168,7 +168,7 @@ class PageIndexController extends GetxController {
         }
       }
     } else {
-      Get.snackbar("Terjadi kesalahan", "Kamu ${distance} meter terlalu jauh dengan jangkauan");
+      Get.snackbar("Terjadi kesalahan", "Kamu terlalu jauh dengan jangkauan pastikan kamu berada dijangkauan perusahaan yaitu 200 meter!");
     }
   }
 

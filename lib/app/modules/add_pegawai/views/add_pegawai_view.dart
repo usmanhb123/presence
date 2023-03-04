@@ -12,50 +12,53 @@ class AddPegawaiView extends GetView<AddPegawaiController> {
         title: Text('Tambah Pegawai'),
         centerTitle: true,
       ),
-      body: ListView(
+      body: Container(
         padding: EdgeInsets.all(20),
-        children: [
-          TextField(
+        child: ListView(
+          padding: EdgeInsets.all(20),
+          children: [
+            TextField(
+              autocorrect: false,
+              controller: controller.nipC,
+              decoration: InputDecoration(
+                labelText: "NIP",
+                border: OutlineInputBorder()
+              ),
+            ),
+            SizedBox(height: 20),
+            TextField(
             autocorrect: false,
-            controller: controller.nipC,
-            decoration: InputDecoration(
-              labelText: "NIP",
-              border: OutlineInputBorder()
+              controller: controller.namaC,
+              decoration: InputDecoration(
+                labelText: "Nama",
+                border: OutlineInputBorder()
+              ),
             ),
-          ),
-          SizedBox(height: 20),
-          TextField(
-          autocorrect: false,
-            controller: controller.namaC,
-            decoration: InputDecoration(
-              labelText: "Nama",
-              border: OutlineInputBorder()
+            SizedBox(height: 20),
+            TextField(
+            autocorrect: false,
+              controller: controller.jobC,
+              decoration: InputDecoration(
+                labelText: "Job",
+                border: OutlineInputBorder()
+              ),
             ),
-          ),
-          SizedBox(height: 20),
-          TextField(
-          autocorrect: false,
-            controller: controller.jobC,
-            decoration: InputDecoration(
-              labelText: "Job",
-              border: OutlineInputBorder()
+            SizedBox(height: 20),
+            TextField(
+            autocorrect: false,
+              controller: controller.emailC,
+              decoration: InputDecoration(
+                labelText: "Email",
+                border: OutlineInputBorder()
+              ),
             ),
-          ),
-          SizedBox(height: 20),
-          TextField(
-          autocorrect: false,
-            controller: controller.emailC,
-            decoration: InputDecoration(
-              labelText: "Email",
-              border: OutlineInputBorder()
-            ),
-          ),
-          SizedBox(height: 20),
-          ElevatedButton(onPressed: (){
-            controller.tambahPegawai();
-            }
-          , child: Text("Tambah"))
-        ],
+            SizedBox(height: 20),
+            ElevatedButton(onPressed: (){
+              controller.tambahPegawai();
+              }
+            , child: Text("Tambah"))
+          ],
+        ),
       )
       );
    
